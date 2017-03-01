@@ -6,21 +6,5 @@
   minimum_rancher_version: v0.56.0
 
 mongo:
-  scale: 1
-  health_check:
-    port: 8080
-    interval: 5000
-    unhealthy_threshold: 3
-    strategy: recreate
-    healthy_threshold: 3
-    response_timeout: 5000
 
 orion:
-  scale: 1
-  health_check:
-    port: 5432
-    interval: 5000
-    unhealthy_threshold: 3
-    strategy: recreate
-    response_timeout: 5000
-    healthy_threshold: 3
