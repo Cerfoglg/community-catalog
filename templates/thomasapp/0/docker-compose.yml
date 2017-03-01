@@ -1,22 +1,9 @@
-services:
-    mongo:
-        image: mongo:3.2
-        command: --nojournal
-        networks:
-            - orion-ha
+mongo:
+    image: mongo:3.2
+    command: --nojournal
 
-    orion:
-        image: fiware/orion:1.3.0
-        command: -dbhost mongo
-        depends_on:
-            - mongo
-        networks:
-            - orion-ha
-        ports:
-            - "1026:1026"
-        deploy:
-            replicas: 3
-
-networks:
-    orion-ha:
-        driver: overlay
+orion:
+    image: fiware/orion:1.3.0
+    command: -dbhost mongo
+    ports:
+        - "1026:1026"
