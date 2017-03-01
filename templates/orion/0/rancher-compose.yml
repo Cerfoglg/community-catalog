@@ -16,7 +16,7 @@ mongo:
     response_timeout: 5000
 
 orion:
-  scale: 3
+  scale: 1
   health_check:
     port: 1026
     interval: 5000
