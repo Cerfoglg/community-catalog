@@ -1,0 +1,4 @@
+kurento:
+   image: fiware/stream-oriented-kurento
+   ports:
+     - "8888:8888"
