@@ -6,6 +6,7 @@
   minimum_rancher_version: v0.56.0
 
 mongo:
+  scale: 3
   health_check:
     port: 27017
     interval: 5000
@@ -15,6 +16,7 @@ mongo:
     response_timeout: 5000
 
 orion:
+  scale: 3
   health_check:
     port: 1026
     interval: 5000
