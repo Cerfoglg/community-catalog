@@ -6,5 +6,19 @@
   minimum_rancher_version: v0.56.0
 
 mongo:
+  health_check:
+    port: 27017
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
 
 orion:
+  health_check:
+    port: 1026
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
