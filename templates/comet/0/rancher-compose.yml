@@ -1,0 +1,46 @@
+.catalog:
+  name: "Comet"
+  version: "1.0"
+  description: "Comet Fiware"
+  uuid: comet-1.0
+  minimum_rancher_version: v0.56.0
+
+orion-mongo:
+  scale: 1
+  health_check:
+    port: 27017
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
+
+orion:
+  scale: 1
+  health_check:
+    port: 1026
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
+
+comet-mongo:
+  scale: 1
+  health_check:
+    port: 27017
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000
+
+comet:
+  scale: 1
+  health_check:
+    port: 8666
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000

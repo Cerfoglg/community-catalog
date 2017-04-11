@@ -1,4 +1,4 @@
-# Orion
+# Comet
 
 ### Note:
 
@@ -6,8 +6,8 @@ Stuff
 
 ### Info:
 
-Orion
+Comet
 
 ## Deployment:
-* Select Orion from the community catalog.
+* Select Comet from the community catalog.
 * Click deploy.

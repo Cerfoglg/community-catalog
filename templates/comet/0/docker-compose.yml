@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+    orion-mongo:
+        image: mongo:3.2
+        command: --nojournal
+
+    orion:
+        image: fiware/orion
+        ports:
+            - "1026:1026"
+        command: -dbhost orion-mongo
+
+    comet-mongo:
+        image: mongo:3.2
+
+    comet:
+        image: telefonicaiot/fiware-sth-comet
+        ports:
+            - "8666:8666"
+        environment:
+            - STH_HOST=0.0.0.0
+            - DB_URI=comet-mongo:27017
