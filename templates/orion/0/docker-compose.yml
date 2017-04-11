@@ -4,8 +4,6 @@ services:
   mongo:
     image: mongo:${MONGO_VERSION}
     command: --nojournal
-    volumes:
-      - mongoVol:/data/db
   orion:
     image: fiware/orion:${ORION_VERSION}
     links:
@@ -13,6 +11,3 @@ services:
     ports:
       - "1026:1026"
     command: -dbhost mongo
-volumes:
-  mongoVol:
-    driver: rancher-nfs
