@@ -1,5 +1,4 @@
 version: '2'
 
 services:
-  cyngus:
-    build: https://github.com/telefonicaid/fiware-cygnus.git#master:docker/cygnus-common
+  cerfoglg/fiware-cygnus:
