@@ -6,8 +6,8 @@ Stuff
 
 ### Info:
 
-Cyngus
+Cepheus
 
 ## Deployment:
-* Select Cyngus from the community catalog.
+* Select Cepheus from the community catalog.
 * Click deploy.
