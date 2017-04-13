@@ -1,0 +1,6 @@
+.catalog:
+  name: "Cepheus"
+  version: "1.0"
+  description: "Cepheus Fiware"
+  uuid: cepheus-1.0
+  minimum_rancher_version: v0.56.0

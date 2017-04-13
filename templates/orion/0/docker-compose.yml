@@ -1,5 +1,13 @@
 version: '2'
 
 services:
-  cygnus:
-    image: cerfoglg/fiware-cygnus
+  mongo:
+    image: mongo:${MONGO_VERSION}
+    command: --nojournal
+  orion:
+    image: fiware/orion:${ORION_VERSION}
+    links:
+      - mongo
+    ports:
+      - "1026:1026"
+    command: -dbhost mongo

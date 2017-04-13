@@ -1,4 +1,4 @@
-# Cyngus
+# Orion
 
 ### Note:
 
@@ -6,8 +6,8 @@ Stuff
 
 ### Info:
 
-Cyngus
+Orion
 
 ## Deployment:
-* Select Cyngus from the community catalog.
+* Select Orion from the community catalog.
 * Click deploy.
