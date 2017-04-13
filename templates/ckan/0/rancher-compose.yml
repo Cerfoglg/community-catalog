@@ -1,39 +1,21 @@
 .catalog:
-  name: "Orion"
+  name: "Ckan"
   version: "1.0"
-  description: "Orion Fiware"
-  uuid: orion-1.0
+  description: "Ckan Fiware"
+  uuid: ckan-1.0
   minimum_rancher_version: v0.56.0
-  questions:
-    - variable: MONGO_VERSION
-      label: Mongo Version
-      description: The version of Mongo DB to use
-      required: true
-      type: string
-      default: 3.2
-    - variable: ORION_VERSION
-      label: Orion Version
-      description: The version of Orion Context Broker to use
-      required: true
-      type: string
-      default: 1.7.0
 
-mongo:
+data:
   scale: 1
-  health_check:
-    port: 27017
-    interval: 5000
-    unhealthy_threshold: 3
-    request_line: ''
-    healthy_threshold: 2
-    response_timeout: 5000
 
-orion:
+postgres:
   scale: 1
-  health_check:
-    port: 1026
-    interval: 5000
-    unhealthy_threshold: 3
-    request_line: ''
-    healthy_threshold: 2
-    response_timeout: 5000
+
+solr:
+  scale: 1
+
+datapusher:
+  scale: 1
+
+ckan:
+  scale: 1
