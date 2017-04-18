@@ -7,5 +7,5 @@ services:
       - orion/orion:orion
       - orion/mongo:mongo
       - mosquitto/mosquitto:mosquitto
-      - iotagent/iotagent:iotagent
+      - iot-agent/iotagent:iotagent
     command: sleep infinity
