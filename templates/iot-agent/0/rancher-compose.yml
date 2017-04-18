@@ -1,0 +1,25 @@
+.catalog:
+  name: "IoT Agent"
+  version: "1.0"
+  description: "IoT Agent"
+  uuid: iotagent-1.0
+  minimum_rancher_version: v0.56.0
+  questions:
+    - variable: ORION
+      label: Orion service
+      description: The orion service to use
+      required: true
+      type: string
+      default: orion
+    - variable: MONGO
+      label: Mongo service
+      description: The orion service to use
+      required: true
+      type: string
+      default: mongo
+    - variable: MOSQUITTO
+      label: Mosquitto service
+      description: The mosquitto service to use
+      required: true
+      type: string
+      default: mosquitto

@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  device-simulator:
+    image: fiware/device-simulator
+    links:
+      - ${ORION}
+      - ${MONGO}
+      - ${MOSQUITTO}
+      - ${IOTAGENT}
