@@ -8,3 +8,4 @@ services:
       - orion/mongo:mongo
       - mosquitto/mosquitto:mosquitto
       - iotagent/iotagent:iotagent
+    command: sleep infinity
