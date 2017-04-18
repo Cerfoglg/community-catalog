@@ -3,6 +3,10 @@ version: '2'
 services:
   iotagent:
     image: telefonicaiot/iotagent-ul
+    external_links:
+      - orion/orion:orion
+      - orion/mongo:mongo
+      - mosquitto/mosquitto:mosquitto
     ports:
       - "7896:7896"
       - "4041:4041"

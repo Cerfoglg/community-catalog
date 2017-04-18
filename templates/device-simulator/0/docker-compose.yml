@@ -4,7 +4,7 @@ services:
   device-simulator:
     image: fiware/device-simulator
     links:
-      - ${ORION}
-      - ${MONGO}
-      - ${MOSQUITTO}
-      - ${IOTAGENT}
+      - orion/orion:orion
+      - orion/mongo:mongo
+      - mosquitto/mosquitto:mosquitto
+      - iotagent/iotagent:iotagent
