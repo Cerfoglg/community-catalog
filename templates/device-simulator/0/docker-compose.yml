@@ -3,7 +3,7 @@ version: '2'
 services:
   device-simulator:
     image: fiware/device-simulator
-    links:
+    external_links:
       - orion/orion:orion
       - orion/mongo:mongo
       - mosquitto/mosquitto:mosquitto
