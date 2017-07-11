@@ -1,0 +1,17 @@
+mongo:
+  image: mongo:3.2
+  command: --nojournal
+orion:
+  image: fiware/orion
+  links:
+    - mongo
+  ports:
+    - ${orion_port}:1026
+  command: -dbhost mongo
+cepheus:
+  image: icclab/fiware-cepheus
+  labels:
+    - "io.rancher.scheduler.affinity:host_label_soft: ${cepheus_host_label}"
+  ports:
+    - ${cepheus_cep_port}:8080
+    - ${cepheus_broker_port}:8081

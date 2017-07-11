@@ -1,0 +1,31 @@
+.catalog:
+  name: "Cepheus and Orion"
+  version: "1.0"
+  description: "Fiware Cepheus and Orion"
+  uuid: cepheus_orion-1.0
+  minimum_rancher_version: v0.56.0
+  questions:
+    - variable: cepheus_cep_port
+      description: "Cepheus CEP port"
+      label: "Cepheus CEP port"
+      required: true
+      default: "8080"
+      type: "int"
+    - variable: cepheus_broker_port
+      description: "Cepheus broker port"
+      label: "Cepheus broker port"
+      required: true
+      default: "8081"
+      type: "int"
+    - variable: orion_port
+      description: "Orion port"
+      label: "Orion port"
+      required: true
+      default: "1026"
+      type: "int"
+    - variable: cepheus_host_label
+      description: "Cepheus host label"
+      label: "Cepheus host label"
+      required: true
+      default: "arch=aarch64"
+      type: "string"
