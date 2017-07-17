@@ -1,0 +1,30 @@
+mongo:
+  image: mongo:3.2
+  command: --nojournal
+orion:
+  image: fiware/orion
+  links:
+    - mongo
+  ports:
+    - ${orion_port}:1026
+  command: -dbhost mongo
+mqtt:
+   image: eclipse-mosquitto
+   ports:
+     - ${mqtt_port}:1883
+iot-agent:
+  image: fiware/iotagent-json
+  links:
+    - orion
+    - mongo
+    - mqtt
+  ports:
+    - ${iota_port}:4041
+  labels:
+    - "io.rancher.scheduler.affinity:host_label_soft: ${iota_host_label}"
+  environment:
+    - IOTA_CB_HOST=orion
+    - IOTA_CB_PORT=${orion_port}
+    - IOTA_MONGO_HOST=mongo
+    - IOTA_MQTT_HOST=mqtt
+    - IOTA_MQTT_PORT=${mqtt_port}

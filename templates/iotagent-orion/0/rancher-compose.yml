@@ -1,0 +1,31 @@
+.catalog:
+  name: "IoT Agent Json and Orion"
+  version: "1.0"
+  description: "Fiware IoT Agent and Orion"
+  uuid: iota_orion-1.0
+  minimum_rancher_version: v0.56.0
+  questions:
+    - variable: iota_port
+      description: "IoTA port"
+      label: "IoTA port"
+      required: true
+      default: "4041"
+      type: "int"
+    - variable: mqtt_port
+      description: "Mosquitto server port"
+      label: "Mosquitto port"
+      required: true
+      default: "1883"
+      type: "int"
+    - variable: orion_port
+      description: "Orion port"
+      label: "Orion port"
+      required: true
+      default: "1026"
+      type: "int"
+    - variable: iota_host_label
+      description: "IoTA host label"
+      label: "IoTA host label"
+      required: true
+      default: "arch=aarch64"
+      type: "string"
